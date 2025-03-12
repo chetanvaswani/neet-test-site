@@ -18,7 +18,7 @@ const QUESTIONS = [
   {
     queNum: 2,
     question:
-      "Out of the following, which type of interaction is responsible for the stabilization of α-helix structure of proteins?",
+      "Out of the following, which type of interaction is responsible for the stabilization of α-helix structure of proteins?\n",
     options: [
       "(1) Ionic bonding",
       "(2) Hydrogen bonding",
@@ -31,7 +31,10 @@ const QUESTIONS = [
     queNum: 3,
     question:
       "Which of the following compounds are amphoteric?\n" +
-      "A. BeO\nB. BaO\nC. Be(OH)₂\nD. Sr(OH)₂",
+      "A. BeO\n" +
+      "B. BaO\n" +
+      "C. Be(OH)₂\n" +
+      "D. Sr(OH)₂",
     options: [
       "(1) Only BeO",
       "(2) BeO and Be(OH)₂",
@@ -43,7 +46,7 @@ const QUESTIONS = [
   {
     queNum: 4,
     question:
-      "The correct shape and I–I–I bond angles respectively in the 3I⁻ ion are:",
+      "The correct shape and I–I–I bond angles respectively in the 3I⁻ ion are:\n",
     options: [
       "(1) Distorted trigonal planar; 135° and 90°",
       "(2) T-shaped; 180° and 90°",
@@ -55,7 +58,7 @@ const QUESTIONS = [
   {
     queNum: 5,
     question:
-      "The correct set from the following in which both pairs are in correct order of melting point is:",
+      "The correct set from the following in which both pairs are in correct order of melting point is:\n",
     options: [
       "(1) LiF > LiCl ; MgO > NaCl",
       "(2) LiCl > LiF ; NaCl > MgO",
@@ -67,14 +70,14 @@ const QUESTIONS = [
   {
     queNum: 6,
     question:
-      "Among the following allotropic forms of sulphur, the number of forms which will show paramagnetism is:",
+      "Among the following allotropic forms of sulphur, the number of forms which will show paramagnetism is:\n",
     options: ["(1) 1", "(2) 2", "(3) 3", "(4) 0"],
     answer: "(1) 1",
   },
   {
     queNum: 7,
     question:
-      "According to molecular theory, the species among the following that does not exist is:",
+      "According to molecular theory, the species among the following that does not exist is:\n",
     options: [
       "(1) He₂⁺",
       "(2) He₂⁻",
@@ -85,7 +88,8 @@ const QUESTIONS = [
   },
   {
     queNum: 8,
-    question: "The correct statement about B₂H₆ is:",
+    question:
+      "The correct statement about B₂H₆ is:\n",
     options: [
       "(1) Terminal B–H bonds have less p-character when compared to bridging bonds.",
       "(2) The two B–H–B bonds are not of same length",
@@ -98,7 +102,7 @@ const QUESTIONS = [
   {
     queNum: 9,
     question:
-      "Among the following, the number of halide(s) which is/are inert to hydrolysis is:",
+      "Among the following, the number of halide(s) which is/are inert to hydrolysis is:\n",
     options: [
       "(1) 1",
       "(2) 2",
@@ -110,7 +114,7 @@ const QUESTIONS = [
   {
     queNum: 10,
     question:
-      "Which among the following species has unequal bond lengths?",
+      "Which among the following species has unequal bond lengths?\n",
     options: [
       "(1) BF₄⁻",
       "(2) XeF₄",
@@ -122,7 +126,7 @@ const QUESTIONS = [
   {
     queNum: 11,
     question:
-      "The correct order of bond dissociation enthalpy of halogens is:",
+      "The correct order of bond dissociation enthalpy of halogens is:\n",
     options: [
       "(1) Cl₂ > F₂ > Br₂ > I₂",
       "(2) I₂ > Br₂ > Cl₂ > F₂",
@@ -136,7 +140,7 @@ const QUESTIONS = [
     question:
       "Assertion A: Dipole-dipole interactions are the only non-covalent interactions, resulting in hydrogen bond formation.\n" +
       "Reason R: Fluorine is the most electronegative element and hydrogen bonds in HF are symmetrical.\n" +
-      "Choose the most appropriate answer.",
+      "Choose the most appropriate answer.\n",
     options: [
       "(1) A is false but R is true",
       "(2) Both A and R are true and R is the correct explanation of A",
@@ -150,7 +154,7 @@ const QUESTIONS = [
     question:
       "Statement I: o-Nitrophenol is steam volatile due to intramolecular hydrogen bonding.\n" +
       "Statement II: o-Nitrophenol has high melting due to hydrogen bonding.\n" +
-      "Choose the most appropriate answer.",
+      "Choose the most appropriate answer.\n",
     options: [
       "(1) Statement I is false but Statement II is true",
       "(2) Both statements are true",
@@ -164,7 +168,7 @@ const QUESTIONS = [
     question:
       "Assertion A: In TℓI₃ (isomorphous to CsI₃), the metal is present in +1 oxidation state.\n" +
       "Reason R: Tℓ metal has fourteen f electrons in the electronic configuration.\n" +
-      "Choose the most appropriate answer.",
+      "Choose the most appropriate answer.\n",
     options: [
       "(1) A is correct but R is not correct",
       "(2) Both A and R are correct and R is the correct explanation of A",
@@ -177,9 +181,17 @@ const QUESTIONS = [
     queNum: 15,
     question:
       "Match List-I with List-II:\n" +
-      "List-I (Molecule): (a) Ne₂, (b) N₂, (c) F₂, (d) O₂\n" +
-      "List-II (Bond order): (i) 1, (ii) 2, (iii) 0, (iv) 3\n" +
-      "Choose the correct answer.",
+      "List-I (Molecule):\n" +
+      "  (a) Ne₂,\n" +
+      "  (b) N₂,\n" +
+      "  (c) F₂,\n" +
+      "  (d) O₂\n" +
+      "List-II (Bond order):\n" +
+      "  (i) 1,\n" +
+      "  (ii) 2,\n" +
+      "  (iii) 0,\n" +
+      "  (iv) 3\n" +
+      "Choose the correct answer.\n",
     options: [
       "(1) (a)→(iii), (b)→(iv), (c)→(i), (d)→(ii)",
       "(2) (a)→(i), (b)→(ii), (c)→(iii), (d)→(iv)",
@@ -192,9 +204,18 @@ const QUESTIONS = [
     queNum: 16,
     question:
       "Match List-I with List-II:\n" +
-      "List-I (Name of oxo acid): (a) Hypophosphorous acid, (b) Orthophosphoric acid, (c) Hypophosphoric acid, (d) Orthophosphorous acid\n" +
-      "List-II (Oxidation state of 'P'): (i) +5, (ii) +4, (iii) +3, (iv) +2, (v) +1\n" +
-      "Choose the correct answer.",
+      "List-I (Name of oxo acid):\n" +
+      "  (a) Hypophosphorous acid,\n" +
+      "  (b) Orthophosphoric acid,\n" +
+      "  (c) Hypophosphoric acid,\n" +
+      "  (d) Orthophosphorous acid\n" +
+      "List-II (Oxidation state of 'P'):\n" +
+      "  (i) +5,\n" +
+      "  (ii) +4,\n" +
+      "  (iii) +3,\n" +
+      "  (iv) +2,\n" +
+      "  (v) +1\n" +
+      "Choose the correct answer.\n",
     options: [
       "(1) (a)-(v), (b)-(i), (c)-(ii), (d)-(iii)",
       "(2) (a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)",
@@ -208,7 +229,7 @@ const QUESTIONS = [
     question:
       "Assertion A: The H–O–H bond angle in a water molecule is 104.5°.\n" +
       "Reason R: The lone pair–lone pair repulsion of electrons is higher than the bond pair–bond pair repulsion.\n" +
-      "Choose the most appropriate answer.",
+      "Choose the most appropriate answer.\n",
     options: [
       "(1) A is false but R is true",
       "(2) Both A and R are true, but R is not the correct explanation of A",
@@ -220,7 +241,7 @@ const QUESTIONS = [
   {
     queNum: 18,
     question:
-      "Which of the following is the INCORRECT statement regarding the structure of C₆₀?",
+      "Which of the following is the INCORRECT statement regarding the structure of C₆₀?\n",
     options: [
       "(1) The six-membered rings are fused to both six- and five-membered rings.",
       "(2) Each carbon atom forms three sigma bonds.",
@@ -232,7 +253,8 @@ const QUESTIONS = [
   {
     queNum: 19,
     question:
-      "A central atom in a molecule has two lone pairs of electrons and forms three single bonds. The shape of this molecule is:",
+      "A central atom in a molecule has two lone pairs of electrons and forms three single bonds.\n" +
+      "The shape of this molecule is:\n",
     options: [
       "(1) see-saw",
       "(2) planar triangular",
@@ -244,14 +266,19 @@ const QUESTIONS = [
   {
     queNum: 20,
     question:
-      "Which of the following compounds cannot act as a Lewis base?",
-    options: ["(1) NF₃", "(2) PCl₅", "(3) SF₄", "(4) ClF₃"],
+      "Which of the following compounds cannot act as a Lewis base?\n",
+    options: [
+      "(1) NF₃",
+      "(2) PCl₅",
+      "(3) SF₄",
+      "(4) ClF₃",
+    ],
     answer: "(2) PCl₅",
   },
   {
     queNum: 21,
     question:
-      "Amongst the following, the linear species is:",
+      "Amongst the following, the linear species is:\n",
     options: [
       "(1) NO₂",
       "(2) Cl₂O",
@@ -263,7 +290,8 @@ const QUESTIONS = [
   {
     queNum: 22,
     question:
-      "AX is a covalent diatomic molecule where A and X are second row elements. Based on Molecular Orbital Theory, if the bond order of AX is 2.5, what is the total number of electrons in AX? (Round off to the nearest integer)",
+      "AX is a covalent diatomic molecule where A and X are second row elements.\n" +
+      "Based on Molecular Orbital Theory, if the bond order of AX is 2.5, what is the total number of electrons in AX? (Round off to the nearest integer)\n",
     options: [
       "(1) 14",
       "(2) 15",
@@ -275,7 +303,8 @@ const QUESTIONS = [
   {
     queNum: 23,
     question:
-      "The number of species among the following that have two lone pairs on their central atom (round off to the nearest integer): SF₄, BF₄⁻, CIF₃, AsF₃, PCl₅, BrF₅, XeF₄, SF₆.",
+      "The number of species among the following that have two lone pairs on their central atom (round off to the nearest integer):\n" +
+      "SF₄, BF₄⁻, CIF₃, AsF₃, PCl₅, BrF₅, XeF₄, SF₆\n",
     options: [
       "(1) 1",
       "(2) 2",
@@ -287,7 +316,8 @@ const QUESTIONS = [
   {
     queNum: 24,
     question:
-      "A xenon compound 'A' upon partial hydrolysis gives XeO₂F₂. The number of lone pairs of electrons present in compound A is (round off to the nearest integer):",
+      "A xenon compound 'A' upon partial hydrolysis gives XeO₂F₂.\n" +
+      "The number of lone pairs of electrons present in compound A is (round off to the nearest integer):\n",
     options: [
       "(1) 17",
       "(2) 18",
@@ -299,7 +329,7 @@ const QUESTIONS = [
   {
     queNum: 25,
     question:
-      "The number of lone pairs of electrons on the central iodine atom in I₃⁻ is:",
+      "The number of lone pairs of electrons on the central iodine atom in I₃⁻ is:\n",
     options: [
       "(1) 1",
       "(2) 2",
@@ -311,7 +341,7 @@ const QUESTIONS = [
   {
     queNum: 26,
     question:
-      "The hybridisations of the atomic orbitals of nitrogen in NO₂, NO⁻, and NH₄⁺ respectively are:",
+      "The hybridisations of the atomic orbitals of nitrogen in NO₂, NO⁻, and NH₄⁺ respectively are:\n",
     options: [
       "(1) sp³, sp² and sp",
       "(2) sp, sp² and sp³",
@@ -324,9 +354,18 @@ const QUESTIONS = [
     queNum: 27,
     question:
       "Match List-I with List-II:\n" +
-      "List-I (Species): (a) SF₄, (b) IF₅, (c) NO₂⁺, (d) NH₄⁺\n" +
-      "List-II (Hybrid Orbitals): (i) sp₃d₂, (ii) d₂sp₃, (iii) sp, (iv) sp³, (v) sp\n" +
-      "Choose the correct answer.",
+      "List-I (Species):\n" +
+      "  (a) SF₄,\n" +
+      "  (b) IF₅,\n" +
+      "  (c) NO₂⁺,\n" +
+      "  (d) NH₄⁺\n" +
+      "List-II (Hybrid Orbitals):\n" +
+      "  (i) sp₃d₂,\n" +
+      "  (ii) d₂sp₃,\n" +
+      "  (iii) sp,\n" +
+      "  (iv) sp³,\n" +
+      "  (v) sp\n" +
+      "Choose the correct answer.\n",
     options: [
       "(1) (a)-(i), (b)-(ii), (c)-(v) and (d)-(iii)",
       "(2) (a)-(ii), (b)-(i), (c)-(iv) and (d)-(v)",
@@ -338,7 +377,7 @@ const QUESTIONS = [
   {
     queNum: 28,
     question:
-      "The number of sigma bonds in CH₃–C≡C–CH is:",
+      "The number of sigma bonds in CH₃–C≡C–CH is:\n",
     options: [
       "(1) 8",
       "(2) 9",
@@ -350,7 +389,7 @@ const QUESTIONS = [
   {
     queNum: 29,
     question:
-      "In the following, select the correct bond order sequence (as indicated by the symbols):",
+      "In the following, select the correct bond order sequence (as indicated by the symbols):\n",
     options: [
       "(1) – + – > > >",
       "(2) + – – > > >",
@@ -362,7 +401,7 @@ const QUESTIONS = [
   {
     queNum: 30,
     question:
-      "Identify the species having one π-bond and the maximum number of canonical forms:",
+      "Identify the species having one π-bond and the maximum number of canonical forms:\n",
     options: [
       "(1) SO₃",
       "(2) O₂",
@@ -374,7 +413,7 @@ const QUESTIONS = [
   {
     queNum: 31,
     question:
-      "The oxidation states of 'P' in H₄P₂O₇, H₄P₂O₅, and H₄P₂O₆, respectively, are:",
+      "The oxidation states of 'P' in H₄P₂O₇, H₄P₂O₅, and H₄P₂O₆, respectively, are:\n",
     options: [
       "(1) 7, 5 and 6",
       "(2) 5, 4 and 3",
@@ -388,7 +427,7 @@ const QUESTIONS = [
     question:
       "Assertion A: Lithium halides are somewhat covalent in nature.\n" +
       "Reason R: Lithium possesses high polarization capability.\n" +
-      "Choose the most appropriate answer.",
+      "Choose the most appropriate answer.\n",
     options: [
       "(1) A is true but R is false",
       "(2) A is false but R is true",
@@ -400,7 +439,7 @@ const QUESTIONS = [
   {
     queNum: 33,
     question:
-      "In gaseous triethyl amine the '–C–N–C–' bond angle is (in degrees):",
+      "In gaseous triethyl amine the '–C–N–C–' bond angle is (in degrees):\n",
     options: [
       "(1) 102",
       "(2) 108",
@@ -412,7 +451,8 @@ const QUESTIONS = [
   {
     queNum: 34,
     question:
-      "The difference between bond orders of CO and NO⁺ is x/2. Find x (round off to the nearest integer):",
+      "The difference between bond orders of CO and NO⁺ is x/2.\n" +
+      "Find x (round off to the nearest integer):\n",
     options: [
       "(1) 0",
       "(2) 1",
@@ -424,7 +464,7 @@ const QUESTIONS = [
   {
     queNum: 35,
     question:
-      "The number of Cl=O bonds in chlorous acid, chloric acid, and perchloric acid respectively are:",
+      "The number of Cl=O bonds in chlorous acid, chloric acid, and perchloric acid respectively are:\n",
     options: [
       "(1) 3, 1 and 1",
       "(2) 4, 1 and 0",
@@ -436,7 +476,7 @@ const QUESTIONS = [
   {
     queNum: 36,
     question:
-      "The total number of electrons in all bonding molecular orbitals of O₂²⁻ is (round off to the nearest integer):",
+      "The total number of electrons in all bonding molecular orbitals of O₂²⁻ is (round off to the nearest integer):\n",
     options: [
       "(1) 8",
       "(2) 10",
@@ -448,7 +488,8 @@ const QUESTIONS = [
   {
     queNum: 37,
     question:
-      "AB₃ is an interhalogen T-shaped molecule. The number of lone pairs of electrons on A is:",
+      "AB₃ is an interhalogen T-shaped molecule.\n" +
+      "The number of lone pairs of electrons on A is:\n",
     options: [
       "(1) 1",
       "(2) 2",
@@ -460,7 +501,8 @@ const QUESTIONS = [
   {
     queNum: 38,
     question:
-      "The interaction energy of London forces between two particles is proportional to rˣ, where r is the distance between the particles. What is the value of x?",
+      "The interaction energy of London forces between two particles is proportional to rˣ, where r is the distance between the particles.\n" +
+      "What is the value of x?\n",
     options: [
       "(1) 3",
       "(2) -3",
@@ -472,7 +514,7 @@ const QUESTIONS = [
   {
     queNum: 39,
     question:
-      "The number of non-ionisable hydrogen atoms present in the final product obtained from the hydrolysis of PCl₅ is:",
+      "The number of non-ionisable hydrogen atoms present in the final product obtained from the hydrolysis of PCl₅ is:\n",
     options: [
       "(1) 0",
       "(2) 2",
@@ -484,7 +526,7 @@ const QUESTIONS = [
   {
     queNum: 40,
     question:
-      "The bond order and magnetic behaviour of O₂⁻ ion are, respectively:",
+      "The bond order and magnetic behaviour of O₂⁻ ion are, respectively:\n",
     options: [
       "(1) 1.5 and paramagnetic",
       "(2) 1.5 and diamagnetic",
@@ -498,7 +540,7 @@ const QUESTIONS = [
     question:
       "Assertion (A): Barium carbonate is insoluble in water and is highly stable.\n" +
       "Reason (R): The thermal stability of the carbonates increases with increasing cationic size.\n" +
-      "Choose the most appropriate answer.",
+      "Choose the most appropriate answer.\n",
     options: [
       "(1) Both (A) and (R) are true but (R) is the true explanation of (A)",
       "(2) (A) is true but (R) is false",
@@ -511,9 +553,17 @@ const QUESTIONS = [
     queNum: 42,
     question:
       "Match List–I with List–II:\n" +
-      "List–I: (a) XeF₂, (b) XeO₂F₂, (c) XeO₃F₂, (d) XeF₄\n" +
-      "List–II: (i) 0, (ii) 1, (iii) 2, (iv) 3\n" +
-      "Choose the correct answer.",
+      "List–I:\n" +
+      "  (a) XeF₂,\n" +
+      "  (b) XeO₂F₂,\n" +
+      "  (c) XeO₃F₂,\n" +
+      "  (d) XeF₄\n" +
+      "List–II:\n" +
+      "  (i) 0,\n" +
+      "  (ii) 1,\n" +
+      "  (iii) 2,\n" +
+      "  (iv) 3\n" +
+      "Choose the correct answer.\n",
     options: [
       "(1) (a)–(iv), (b)–(i), (c)–(ii), (d)–(iii)",
       "(2) (a)–(iii), (b)–(iv), (c)–(ii), (d)–(i)",
@@ -525,7 +575,7 @@ const QUESTIONS = [
   {
     queNum: 43,
     question:
-      "In which one of the following molecules is the strongest back donation of an electron pair from halide to boron expected?",
+      "In which one of the following molecules is the strongest back donation of an electron pair from halide to boron expected?\n",
     options: [
       "(1) BCl₃",
       "(2) BF₃",
@@ -537,7 +587,7 @@ const QUESTIONS = [
   {
     queNum: 44,
     question:
-      "The number of species having non-pyramidal shape among the following is:",
+      "The number of species having non-pyramidal shape among the following is:\n",
     options: [
       "(1) 1",
       "(2) 2",
@@ -549,7 +599,7 @@ const QUESTIONS = [
   {
     queNum: 45,
     question:
-      "The number of hydrogen bonded water molecules associated with the stoichiometry of CuSO₄·5H₂O is:",
+      "The number of hydrogen bonded water molecules associated with the stoichiometry of CuSO₄·5H₂O is:\n",
     options: [
       "(1) 1",
       "(2) 2",
@@ -561,7 +611,7 @@ const QUESTIONS = [
   {
     queNum: 46,
     question:
-      "Which one of the following correctly represents the order of stability of oxides, X₂O (where X is a halogen)?",
+      "Which one of the following correctly represents the order of stability of oxides, X₂O (where X is a halogen)?\n",
     options: [
       "(1) Br > Cl > I",
       "(2) Br > I > Cl",
@@ -573,7 +623,7 @@ const QUESTIONS = [
   {
     queNum: 47,
     question:
-      "According to molecular orbital theory, the number of unpaired electrons in O₂⁻ is:",
+      "According to molecular orbital theory, the number of unpaired electrons in O₂⁻ is:\n",
     options: [
       "(1) 0",
       "(2) 1",
@@ -585,7 +635,7 @@ const QUESTIONS = [
   {
     queNum: 48,
     question:
-      "Number of paramagnetic oxides among the following—Li₂O, CaO, Na₂O₂, KO₂, MgO, and K₂O—is:",
+      "Number of paramagnetic oxides among the following—Li₂O, CaO, Na₂O₂, KO₂, MgO, and K₂O—is:\n",
     options: [
       "(1) 1",
       "(2) 2",
@@ -597,7 +647,7 @@ const QUESTIONS = [
   {
     queNum: 49,
     question:
-      "The spin-only magnetic moment value of 2B⁺ species (in BM, rounded to the nearest integer) is:",
+      "The spin-only magnetic moment value of 2B⁺ species (in BM, rounded to the nearest integer) is:\n",
     options: [
       "(1) 1.73",
       "(2) 2",

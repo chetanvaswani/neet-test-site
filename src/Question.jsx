@@ -24,7 +24,9 @@ export default function Question({ queNum, question, options, answer, submit }) 
   return (
     <div className="w-[400px] max-w-[95%] bg-[#1a1a1a] p-6 rounded-2xl shadow-md border border-gray-700 ">
       <h2 className="text-lg font-semibold text-[#ededed] mb-4">
-        {queNum}. {question}
+        Que-{queNum}. {question.split('\n').map((line, i) => (
+            <div key={i}>{line}</div>
+        ))}
       </h2>
       <div className="space-y-2">
         {options.map((option, index) => (
