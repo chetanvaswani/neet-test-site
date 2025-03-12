@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Question from "./Question";
 
+
+
 function App() {
   const [questions, setQuestions] = useState(null);
   const [error, setError] = useState(false);
@@ -9,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const pathSegments = window.location.pathname.split("/");
-    const extractedFileName = pathSegments[pathSegments.length - 1] || "biology";
+    const extractedFileName = pathSegments[pathSegments.length - 1] || "chemical-bonding";
     setFileName(extractedFileName);
 
     import(`./questions/${extractedFileName}.js`)
