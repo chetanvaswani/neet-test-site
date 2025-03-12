@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import Question from "./Question";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [questions, setQuestions] = useState(null);
+  const [error, setError] = useState(false);
+  const [fileName, setFileName] = useState("biology"); // Default to biology
+  const [submit, setSubmit] = useState(false)
+
+  useEffect(() => {
+    const pathSegments = window.location.pathname.split("/");
+    const extractedFileName = pathSegments[pathSegments.length - 1] || "biology";
+    setFileName(extractedFileName);
+
+    import(`./questions/${extractedFileName}.js`)
+      .then((module) => {
+        setQuestions(module.default);
+        setError(false); // Reset error if successfully loaded
+      })
+      .catch((err) => {
+        console.error("Error loading questions:", err);
+        setError(true);
+      });
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="h-screen w-screen  bg-[#0a0a0a] text-[#ededed] flex flex-col items-center">
+      <div className="h-[90%] w-full overflow-y-scroll flex flex-wrap justify-center gap-6 p-10">
+        <h1 className="text-2xl font-bold text-white mt-6">
+          Questions from {fileName}
+        </h1>
+        {error ? (
+          <p className="text-center text-red-500 text-xl font-bold">Invalid URL</p>
+        ) : questions ? (
+          questions.map(({ queNum, question, options, answer }) => (
+            <Question key={queNum} queNum={queNum} question={question} answer={answer} submit={submit} options={options} />
+          ))
+        ) : (
+          <p className="text-center text-gray-400">Loading questions...</p>
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="m-[20px] w-full flex justify-center items-center">
+          <button className="bg-blue-600 w-[90%] max-w-[400px] p-3 font-bold rounded-lg cursor-pointer" onClick={() => {
+            setSubmit(true)
+          }}>Submit</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
