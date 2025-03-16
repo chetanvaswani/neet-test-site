@@ -14,7 +14,7 @@ const QUESTIONS = [
         "(4) A - Standards, B - Wing, C - Keel",
       ],
       answer: "(4) A - Standards, B - Wing, C - Keel",
-      img: "../../public/assets/morphology-1.png",
+      img: "/assets/morphology-1.png",
     },
     {
       queNum: 2,
@@ -194,7 +194,7 @@ const QUESTIONS = [
         "(4) A - III, B - I, C - II",
       ],
       answer: "(1) A - I, B - II, C - III",
-      img: "../../public/assets/morphology-12.png",
+      img: "/assets/morphology-12.png",
     },
     {
       queNum: 13,
@@ -243,7 +243,7 @@ const QUESTIONS = [
         "(4) Option 4",
       ],
       answer: "(3) Option 3",
-      img: "../../public/assets/morphology-15.png",
+      img: "/assets/morphology-15.png",
     },
     {
       queNum: 16,
@@ -260,7 +260,7 @@ const QUESTIONS = [
         "(4) Diagram 4",
       ],
       answer: "(3) Diagram 3",
-      img: "../../public/assets/morphology-16.png",
+      img: "/assets/morphology-16.png",
     },
     {
       queNum: 17,
