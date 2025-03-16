@@ -77,10 +77,10 @@ function App() {
         totalNotAnswered++;
       }
     });
-
+    const totalQue = questions.length
     const formattedTime = `${ Math.floor(time/3600) < 10 ? "0" + Math.floor(time/3600) : Math.floor(time/3600) }:${ (Math.floor(time/60)) % 60 < 10 ? "0" + (Math.floor(time/60)) % 60 : (Math.floor(time/60)) % 60 }:${ (time % 60) < 10 ? "0" + (time % 60): (time % 60) }`
     // Build summary message including total time.
-    const statsMessage = `Time Taken: ${formattedTime}\nTotal Correct: ${totalCorrect}\nTotal Incorrect: ${totalIncorrect}\nNot Answered: ${totalNotAnswered}\n\n`;
+    const statsMessage = `Time Taken: ${formattedTime}\nTotal Correct: ${totalCorrect}/${totalQue}\nTotal Incorrect: ${totalIncorrect}/${totalQue}\nNot Answered: ${totalNotAnswered}/${totalQue}\n\n`;
     // Build detailed results per question.
     const detailsMessage = questions
       .map(({ queNum }) => {
