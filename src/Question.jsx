@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-export default function Question({ queNum, question, options, answer, submit, onAnswerChange }) {
+export default function Question({ queNum, question, options, answer, submit, onAnswerChange, img }) {
   const [selectedOption, setSelectedOption] = useState(null);
   const [currColor, setCurrColor] = useState("bg-blue-600");
   const [text, setText] = useState("")
+
 
   useEffect(() => {
     if (submit) {
@@ -45,6 +46,7 @@ export default function Question({ queNum, question, options, answer, submit, on
       <h2 className="text-lg font-semibold text-[#ededed] mb-4 whitespace-pre-line">
         { text !== "" ? text + "\n" : false} Que-{queNum}. {question}
       </h2>
+      {img && <img src={img} alt={`Question ${queNum} illustration`} className="mb-4 w-full" />}
       <div className="space-y-2">
         {options.map((option, index) => (
           <label

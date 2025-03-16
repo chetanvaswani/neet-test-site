@@ -117,6 +117,7 @@ const QUESTIONS = [
         "(4) Fishes",
       ],
       answer: "(1) Reptiles",
+      img: "../../public/assets/1.png"
     },
     {
       queNum: 8,

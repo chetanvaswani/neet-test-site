@@ -43,7 +43,7 @@ function App() {
 
   // Callback from each Question component to update its result.
   const handleAnswerChange = (queNum, resultText) => {
-    console.log(queNum, resultText);
+    // console.log(queNum, resultText);
     setResults((prev) => ({
       ...prev,
       [queNum]: resultText,
@@ -133,7 +133,7 @@ function App() {
               Invalid URL
             </p>
           ) : questions ? (
-            questions.map(({ queNum, question, options, answer }) => (
+            questions.map(({ queNum, question, options, answer, img }) => (
               <Question
                 key={queNum}
                 queNum={queNum}
@@ -142,6 +142,7 @@ function App() {
                 submit={submit}
                 options={options}
                 onAnswerChange={handleAnswerChange}
+                img={img ? img : null}
               />
             ))
           ) : (
