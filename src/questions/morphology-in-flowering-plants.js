@@ -290,11 +290,7 @@ const QUESTIONS = [
     {
       queNum: 19,
       question:
-        "Correct position of floral parts over thalamus in mustard plant is :-\n" +
-        "(1) Gynoecium occupies the highest position, while the other parts are situated below it.\n" +
-        "(2) Margin of the thalamus grows upward, enclosing the ovary completely, and other parts arise below the ovary.\n" +
-        "(3) Gynoecium is present in the centre and other parts cover it partially.\n" +
-        "(4) Gynoecium is situated in the centre, and other parts of the flower are located at the rim of the thalamus, at the same level.",
+        "Correct position of floral parts over thalamus in mustard plant is :-\n",
       options: [
         "(1) Gynoecium occupies the highest position, while the other parts are situated below it.",
         "(2) Margin of the thalamus grows upward, enclosing the ovary completely, and other parts arise below the ovary.",
