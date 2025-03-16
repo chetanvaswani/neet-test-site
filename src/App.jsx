@@ -1,20 +1,28 @@
 import { useEffect, useState } from "react";
 import Question from "./Question";
+import Home from "./Home";
 
 function App() {
   const [questions, setQuestions] = useState(null);
   const [error, setError] = useState(false);
-  const [fileName, setFileName] = useState("chemical-bonding"); // Default file
-  // results object maps question numbers to "Correct", "Incorrect", or "Not Answered!"
+  const [fileName, setFileName] = useState("chemical-bonding");
   const [results, setResults] = useState({});
   const [submit, setSubmit] = useState(false);
   const [started, setStarted] = useState(false);
   const [time, setTime] = useState(0);
+  const urlParams = new URLSearchParams(window.location.search);
+  const extractedFileName = urlParams.get("test") || null;
+
+  if (extractedFileName == null){
+    return (
+      <div>
+        <Home />
+      </div>
+    )
+  }
 
   // Load questions based on URL parameter
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const extractedFileName = urlParams.get("test") || "chemical-bonding";
     setFileName(extractedFileName);
 
     import(`./questions/${extractedFileName}.js`)
@@ -61,12 +69,12 @@ function App() {
     }
     setSubmit(true);
     if (!questions) return;
-
+  
     // Calculate summary statistics from results.
     let totalCorrect = 0;
     let totalIncorrect = 0;
     let totalNotAnswered = 0;
-
+  
     questions.forEach(({ queNum }) => {
       const res = results[queNum] || "Not Answered!";
       if (res.toLowerCase() === "correct") {
@@ -77,10 +85,22 @@ function App() {
         totalNotAnswered++;
       }
     });
-    const totalQue = questions.length
-    const formattedTime = `${ Math.floor(time/3600) < 10 ? "0" + Math.floor(time/3600) : Math.floor(time/3600) }:${ (Math.floor(time/60)) % 60 < 10 ? "0" + (Math.floor(time/60)) % 60 : (Math.floor(time/60)) % 60 }:${ (time % 60) < 10 ? "0" + (time % 60): (time % 60) }`
-    // Build summary message including total time.
-    const statsMessage = `Time Taken: ${formattedTime}\nTotal Correct: ${totalCorrect}/${totalQue}\nTotal Incorrect: ${totalIncorrect}/${totalQue}\nNot Answered: ${totalNotAnswered}/${totalQue}\n\n`;
+    const totalQue = questions.length;
+    const percentageCorrect = Math.round((totalCorrect / totalQue) * 100);
+    const percentageIncorrect = Math.round((totalIncorrect / totalQue) * 100);
+    const percentageNotAnswered = Math.round((totalNotAnswered / totalQue) * 100);
+  
+    // Format the time duration (hh:mm:ss)
+    const formattedTime = `${Math.floor(time / 3600) < 10 ? "0" + Math.floor(time / 3600) : Math.floor(time / 3600)}:${(Math.floor(time / 60) % 60) < 10 ? "0" + (Math.floor(time / 60) % 60) : (Math.floor(time / 60) % 60)}:${(time % 60) < 10 ? "0" + (time % 60) : (time % 60)}`;
+  
+    // Get current date and time issued
+    const now = new Date();
+    const dateIssued = now.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    const timeIssued = now.toTimeString().split(' ')[0]; // Format: HH:MM:SS
+  
+    // Build summary message including test metadata.
+    const statsMessage = `Test: ${fileName}\nDate: ${dateIssued}\nTime Issued: ${timeIssued}\nDuration: ${formattedTime}\nTotal Questions: ${totalQue}\nCorrect: ${totalCorrect} (${percentageCorrect}%)\nIncorrect: ${totalIncorrect} (${percentageIncorrect}%)\nNot Answered: ${totalNotAnswered} (${percentageNotAnswered}%)\n\n`;
+  
     // Build detailed results per question.
     const detailsMessage = questions
       .map(({ queNum }) => {
@@ -88,12 +108,13 @@ function App() {
         return `${queNum}. ${res}`;
       })
       .join("\n");
-
+  
     const message = statsMessage + detailsMessage;
     const encodedMessage = encodeURIComponent(message);
     const whatsappLink = `https://api.whatsapp.com/send?text=${encodedMessage}`;
     window.open(whatsappLink, "_blank");
   };
+  
 
   // Before starting, show only the "Start Timer" screen.
   if (!started) {
