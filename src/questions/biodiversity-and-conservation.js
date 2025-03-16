@@ -117,7 +117,7 @@ const QUESTIONS = [
         "(4) Fishes",
       ],
       answer: "(1) Reptiles",
-      img: "../../public/assets/1.png"
+      img: "./../public/assets/1.png"
     },
     {
       queNum: 8,
@@ -184,6 +184,7 @@ const QUESTIONS = [
         "(4) X = Richness, Y = Area, Z = Slope",
       ],
       answer: "(4) X = Richness, Y = Area, Z = Slope",
+      img: "../../public/assets/2.png"
     },
     {
       queNum: 12,
