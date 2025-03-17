@@ -8,6 +8,7 @@ export default function Home() {
   useEffect(() => {
     // Dynamically get all files from questions folder
     const modules = import.meta.glob("./questions/*.js");
+    console.log(modules)
 
     // Extract filenames and remove extensions
     const testFiles = Object.keys(modules).map((filePath) => {
