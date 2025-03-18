@@ -54,7 +54,7 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className="relative top-[100px] w-full h-full overflow-y-scroll gap-5 flex flex-col justify-start items-center mt-5">
+      <div className="relative top-[100px] w-full h-full overflow-y-scroll pb-[200px] gap-5 flex flex-col justify-start items-center mt-5">
         {filteredTests.map((test) => (
           <div
             key={test}
