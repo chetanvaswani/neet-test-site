@@ -64,6 +64,11 @@ export default function Home() {
             {test.replace(/-/g, " ").toUpperCase()}
           </div>
         ))}
+        {
+          filteredTests.map((test) => {
+            console.log(test.replace(/-/g, " ").toUpperCase())
+          })
+        }
       </div>
     </div>
   );
