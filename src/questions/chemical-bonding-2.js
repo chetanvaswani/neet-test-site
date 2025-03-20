@@ -9,7 +9,7 @@ const QUESTIONS = [
         "(4) 0, +1, –1"
       ],
       answer: "(3) +1, 0, –1",
-    img: "chemical-bonding-1.png"
+    img: "/assets/chemical-bonding-1.png"
     },
     {
       queNum: 2,
